@@ -3,7 +3,7 @@ function App() {
     <div className="App container mt-5">
       <h1 className="text-primary">
         <i className="bi bi-diagram-2-fill"></i>
-        Test Application
+        Test Application : Gurpreet and Inderpreet
       </h1>
     </div>
   );
