@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">Test React App</header>
+    <div className="App container mt-5">
+      <h1 className="text-primary">
+        <i className="bi bi-diagram-2-fill"></i>
+        Test Application
+      </h1>
     </div>
   );
 }
