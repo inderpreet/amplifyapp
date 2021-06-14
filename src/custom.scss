@@ -1,4 +1,41 @@
 $primary: #6f42c1;
 
+.image-frame {
+  height: 500px;
+  width: 500px;
+  border: 2px solid $primary;
+  box-sizing: border-box;
+  margin-left: 3rem !important;
+  margin-top: 3rem !important;
+  border-radius: 10px;
+}
+
+.top-row {
+  height: 100px;
+}
+
+.top-row-left {
+  background-color: red;
+}
+
+.top-row-right {
+  background-color: blue;
+}
+
+.row-two {
+  height: 300px;
+  background-color: brown;
+}
+
+.row-bottom {
+  height: 100px;
+  background-color: cadetblue;
+  border-radius: 0 0 10px 10px;
+}
+
+.item-box {
+  border: 1px solid $primary;
+}
+
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
