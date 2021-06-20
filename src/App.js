@@ -4,9 +4,11 @@ function App() {
   return (
     <div className="App image-frame container">
       <div className="row top-row align-items-center">
-        <div className="col-9 h2">Detached Backsplit 5 Bunglow</div>
+        <div className="col-9 h2">
+          Detached Backsplit 5 Bunglow: <br /> Sold: 2,20,000 Over Asking
+        </div>
         <div className="col h3 top-row-right" style={{ color: "white" }}>
-          NEW LISTING
+          HIGHEST IN THE STREET
         </div>
       </div>
       <div className="row row-two">

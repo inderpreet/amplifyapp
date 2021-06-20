@@ -21,6 +21,7 @@ $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
   background-image: url("./assets/img/top-row.png");
   background-size: cover;
   background-position: center;
+  // color: rgb(218, 204, 8);
 }
 
 .top-row-left {
@@ -33,7 +34,7 @@ $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
 
 .row-two {
   height: 500px;
-  background-color: brown;
+  background-color: rgb(218, 204, 8);
   z-index: -1;
   position: relative;
 }
@@ -76,7 +77,11 @@ $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
   background-color: white;
   margin-right: 10px !important;
   height: 230px;
+  padding-top: 10px;
   padding-left: 25px;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 .row-bottom {
