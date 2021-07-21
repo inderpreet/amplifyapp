@@ -5,39 +5,43 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { file: "", imagePreviewUrl: "" };
-
     this.state = { greybox: "" };
     this.state = { redbox: "" };
     this.state = { whitebox1: "" };
     this.state = { whitebox2: "" };
-
     this.state = { whitebox3: "" };
-
     this.state = { whitebox4: "" };
-
     this.state = { whitebox5: "" };
   }
+
   handleChange(e) {
     this.setState({ value: e.target.value });
   }
+
   myChangeHandler = (event) => {
     this.setState({ greybox: event.target.value });
   };
+
   myChangeHandler1 = (event) => {
     this.setState({ redbox: event.target.value });
   };
+
   myChangeHandler2 = (event) => {
     this.setState({ whitebox1: event.target.value });
   };
+
   myChangeHandler3 = (event) => {
     this.setState({ whitebox2: event.target.value });
   };
+
   myChangeHandler4 = (event) => {
     this.setState({ whitebox3: event.target.value });
   };
+
   myChangeHandler5 = (event) => {
     this.setState({ whitebox4: event.target.value });
   };
+
   myChangeHandler6 = (event) => {
     this.setState({ whitebox5: event.target.value });
   };
@@ -53,16 +57,19 @@ class App extends React.Component {
     // TODO: do something with -> this.state.file
     console.log("handle uploading-", this.state.file);
   }
+
   _handleSubmit2(e) {
     e.preventDefault();
     // TODO: do something with -> this.state.file
     console.log("handle uploading-", this.state.file);
   }
+
   _handleSubmit3(e) {
     e.preventDefault();
     // TODO: do something with -> this.state.file
     console.log("handle uploading-", this.state.file);
   }
+
   _handleImageChange(e) {
     e.preventDefault();
 
@@ -94,6 +101,7 @@ class App extends React.Component {
 
     reader.readAsDataURL(file);
   }
+
   _handleImageChange2(e) {
     e.preventDefault();
 
@@ -109,6 +117,7 @@ class App extends React.Component {
 
     reader.readAsDataURL(file);
   }
+
   _handleImageChange3(e) {
     e.preventDefault();
 
@@ -128,14 +137,6 @@ class App extends React.Component {
   render() {
     let { imagePreviewUrl } = this.state;
     let imagePreview = null;
-    if (imagePreviewUrl) {
-      imagePreview = <img src={imagePreviewUrl} />;
-    } else {
-      imagePreview = (
-        <div className="previewText">Please select an Image for Preview</div>
-      );
-    }
-
     let greybox = null;
     let redbox = null;
     let whitebox1 = null;
@@ -145,6 +146,15 @@ class App extends React.Component {
     let whitebox5 = null;
     let { imagePreviewUrl1 } = this.state;
     let imagePreview1 = null;
+    
+    if (imagePreviewUrl) {
+      imagePreview = <img src={imagePreviewUrl} />;
+    } else {
+      imagePreview = (
+        <div className="previewText">Please select an Image for Preview</div>
+      );
+    }
+    
     if (imagePreviewUrl1) {
       imagePreview1 = <img src={imagePreviewUrl1} />;
     } else {
@@ -175,30 +185,27 @@ class App extends React.Component {
 
     return (
       <div>
-      <div className="float-container container-fluid">
-        <div className="float-child row">
-          <ImageUpload
-            imagePreview={imagePreview}
-            imagePreview1={imagePreview1}
-            imagePreview2={imagePreview2}
-            imagePreview3={imagePreview3}
-            greybox={this.state.greybox}
-            redbox={this.state.redbox}
-            whitebox1={this.state.whitebox1}
-            whitebox2={this.state.whitebox2}
-            whitebox3={this.state.whitebox3}
-            whitebox4={this.state.whitebox4}
-            whitebox5={this.state.whitebox5}
-          />
+        <div className="float-container container-fluid">
+          <div className="float-child row">
+            <ImageUpload
+              imagePreview={imagePreview}
+              imagePreview1={imagePreview1}
+              imagePreview2={imagePreview2}
+              imagePreview3={imagePreview3}
+              greybox={this.state.greybox}
+              redbox={this.state.redbox}
+              whitebox1={this.state.whitebox1}
+              whitebox2={this.state.whitebox2}
+              whitebox3={this.state.whitebox3}
+              whitebox4={this.state.whitebox4}
+              whitebox5={this.state.whitebox5}
+            />
+          </div>
         </div>
-      </div>
-      <div className="float-child row">
+        <div className="float-child row">
           <div className="heading-text-1">Select Images For Upload</div>
           <div className="image-upload-box">
-            <form
-              className="form-1"
-              onSubmit={(e) => this._handleSubmit(e)}
-            >
+            <form className="form-1" onSubmit={(e) => this._handleSubmit(e)}>
               <div className="heading-text-1"> Image1</div>{" "}
               <input
                 className="fileInput"
@@ -206,10 +213,7 @@ class App extends React.Component {
                 onChange={(e) => this._handleImageChange(e)}
               />
             </form>
-            <form
-              className="form-1"
-              onSubmit={(e) => this._handleSubmit1(e)}
-            >
+            <form className="form-1" onSubmit={(e) => this._handleSubmit1(e)}>
               <div className="heading-text-1"> Image2</div>{" "}
               <input
                 className="fileInput"
@@ -218,10 +222,7 @@ class App extends React.Component {
               />
             </form>
 
-            <form
-              className="form-1"
-              onSubmit={(e) => this._handleSubmit2(e)}
-            >
+            <form className="form-1" onSubmit={(e) => this._handleSubmit2(e)}>
               <div className="heading-text-1"> Image3</div>{" "}
               <input
                 className="fileInput"
@@ -229,10 +230,7 @@ class App extends React.Component {
                 onChange={(e) => this._handleImageChange2(e)}
               />
             </form>
-            <form
-              className="form-1"
-              onSubmit={(e) => this._handleSubmit3(e)}
-            >
+            <form className="form-1" onSubmit={(e) => this._handleSubmit3(e)}>
               <div className="heading-text-1"> Image4</div>{" "}
               <input
                 className="fileInput"
