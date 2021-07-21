@@ -174,8 +174,9 @@ class App extends React.Component {
     }
 
     return (
-      <div className="float-container">
-        <div className="float-child">
+      <div>
+      <div className="float-container container-fluid">
+        <div className="float-child row">
           <ImageUpload
             imagePreview={imagePreview}
             imagePreview1={imagePreview1}
@@ -190,8 +191,8 @@ class App extends React.Component {
             whitebox5={this.state.whitebox5}
           />
         </div>
-
-        <div className="float-child">
+      </div>
+      <div className="float-child row">
           <div className="heading-text-1">Select Images For Upload</div>
           <div className="image-upload-box">
             <form
