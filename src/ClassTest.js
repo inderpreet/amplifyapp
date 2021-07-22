@@ -3,19 +3,27 @@ import React, {Component} from 'react';
 class ClassTest extends Component {
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid main-container-class">
                 <div className="app-title">
                     {/*<h1>Social Media Badge Generator</h1>*/}
                 </div>
 
                 <div className="row top-menu">
-                    <div className="input-group data-entry-box">
+                    <div className="input-group data-entry-group">
                         <button className="btn btn-outline-secondary" type="button"
                                 id="file-upload-button">File...
                         </button>
                     </div>
-                </div>
 
+                    <div className="input-group data-entry-group">
+                        <span className="input-group-text">
+                            Text1
+                        </span>
+                    </div>
+                </div>
+                {/*top menu ends*/}
+
+                {/*main content area*/}
                 <div className="row square-badge">
                     Final Mosiac
                 </div>

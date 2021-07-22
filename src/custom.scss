@@ -161,11 +161,28 @@ $bs-gutter-y: 0;
   font-weight: bold;
 }
 
+.main-container-class {
+  margin: 5px;
+}
+
+.top-menu {
+  margin-top: 10px;
+  border-radius: 7px;
+  border: 1px azure;
+  width: 100%;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.data-entry-group {
+  margin-top: 5px;
+}
+
 .square-badge {
   margin: 20px;
   height: 0;
-  width: 80%;
-  padding-bottom: 80%;
+  width: 47%;
+  padding-bottom: 47%;
   background-color: red;
   border-radius: 7px;
 }
