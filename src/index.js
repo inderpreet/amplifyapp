@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import "./custom.scss";
-import ClassTest from "./ClassTest";
+import FunctionTest from "./FunctionTest";
 
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-      <ClassTest />
+      <FunctionTest/>
   </React.StrictMode>,
   document.getElementById("root")
 );
