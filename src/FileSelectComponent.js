@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 
-const FileSelectComponent = ({setText}) => {
+const FileSelectComponent = ({setImageUrl, imageUrl, index}) => {
     const [imagePreviewUrl, setImagePreviewUrl] = useState("");
 
-    const [imgHtml, setImgHtml] = useState("blank");
+    // const [imgHtml, setImgHtml] = useState("blank");
 
     const onFileSelect = (event) => {
         event.preventDefault();
@@ -13,14 +13,22 @@ const FileSelectComponent = ({setText}) => {
             setImagePreviewUrl(reader.result);
         }
         reader.readAsDataURL(file);
-        console.log(file);
+        // console.log(file);
+    }
+
+    const updateUrl = (html) => {
+        let temp = imageUrl.slice(); // create a clone
+        temp[index] = html;
+        setImageUrl(temp);
     }
 
     useEffect(() => {
         if (imagePreviewUrl) {
-            setImgHtml( <img src={imagePreviewUrl} alt="Image"/> );
+            // setImgHtml(<img src={imagePreviewUrl} alt="Image"/>);
+            updateUrl(<img src={imagePreviewUrl} alt="Image"/>);
         } else {
-            setImgHtml( <div>No Image yet</div>);
+            // setImgHtml(<div>No Image yet</div>);
+            updateUrl(<div>No Image yet</div>);
         }
     }, [imagePreviewUrl]);
 
