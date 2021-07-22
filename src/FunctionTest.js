@@ -1,42 +1,8 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-class MyComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentWillMount() {
-
-    }
-
-    componentDidMount() {
-
-    }
-
-    componentWillReceiveProps(nextProps) {
-
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
-
-    componentWillUnmount() {
-
-    }
-
-    render() {
-        return (
-            <div className="container-fluid main-container-class">
+const MyComponent = () => {
+    return (
+        <div className="container-fluid main-container-class">
                 <div className="app-title">
                     {/*<h1>Social Media Badge Generator</h1>*/}
                 </div>
@@ -99,10 +65,7 @@ class MyComponent extends Component {
                     </div>
                 </footer>
             </div>
-        );
-    }
-}
-
-MyComponent.propTypes = {};
+    );
+};
 
 export default MyComponent;
