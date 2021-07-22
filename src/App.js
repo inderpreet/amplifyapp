@@ -1,5 +1,5 @@
 import React from "react";
-import ImageUpload from "./ImageUpload";
+import ImageMosiac from "./ImageMosiac";
 
 class App extends React.Component {
   constructor(props) {
@@ -151,7 +151,7 @@ class App extends React.Component {
       imagePreview = <img src={imagePreviewUrl} />;
     } else {
       imagePreview = (
-        <div className="previewText">Please select an Image for Preview</div>
+        <div className="previewText">Please select an Image</div>
       );
     }
     
@@ -159,7 +159,7 @@ class App extends React.Component {
       imagePreview1 = <img src={imagePreviewUrl1} />;
     } else {
       imagePreview1 = (
-        <div className="previewText">Please select an Image for Preview</div>
+        <div className="previewText">Please select an Image</div>
       );
     }
 
@@ -169,7 +169,7 @@ class App extends React.Component {
       imagePreview2 = <img src={imagePreviewUrl2} />;
     } else {
       imagePreview2 = (
-        <div className="previewText">Please select an Image for Preview</div>
+        <div className="previewText">Please select an Image</div>
       );
     }
 
@@ -179,7 +179,7 @@ class App extends React.Component {
       imagePreview3 = <img src={imagePreviewUrl3} />;
     } else {
       imagePreview3 = (
-        <div className="previewText">Please select an Image for Preview</div>
+        <div className="previewText">Please select an Image</div>
       );
     }
 
@@ -187,7 +187,7 @@ class App extends React.Component {
       <div>
         <div className="float-container container-fluid">
           <div className="float-child row">
-            <ImageUpload
+            {/* <ImageUpload
               imagePreview={imagePreview}
               imagePreview1={imagePreview1}
               imagePreview2={imagePreview2}
@@ -199,7 +199,7 @@ class App extends React.Component {
               whitebox3={this.state.whitebox3}
               whitebox4={this.state.whitebox4}
               whitebox5={this.state.whitebox5}
-            />
+            /> */}
           </div>
         </div>
         <div className="float-child row">
