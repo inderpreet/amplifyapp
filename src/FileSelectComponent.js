@@ -13,9 +13,12 @@ const FileSelectComponent = ({setImageUrl, imageUrl, index}) => {
     }
 
     const updateUrl = (html) => {
-        let temp = imageUrl.slice(); // create a clone
+        if(imageUrl){
+            let temp = imageUrl.slice(); // create a clone
         temp[index] = html;
         setImageUrl(temp);
+        }
+
     }
 
     useEffect(() => {

@@ -15,7 +15,6 @@ const DataEntryBar = (setImg, i) => {
             <FileSelectComponent imageUrl={images} setImageUrl={setImages} index={3} />
             <FileSelectComponent imageUrl={images} setImageUrl={setImages} index={4} />
             <div className="row">
-                Test Image
                 {images[0]}
                 {images[1]}
                 {images[2]}
