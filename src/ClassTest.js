@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import FileSelectComponent from "./FileSelectComponent";
 import DataEntryBar from "./DataEntryBar";
 import Footer from "./Footer";
 
@@ -15,8 +14,11 @@ class ClassTest extends Component {
     render() {
         return (
             <div className="container-fluid main-container-class">
-                <div className="app-title">
-                    {/*<h1>Social Media Badge Generator</h1>*/}
+
+                <div className="row">
+                    <nav className="navbar navbar-light bg-light">
+                        <span className="navbar-brand fw-bold">Social Media Badge Generator</span>
+                    </nav>
                 </div>
 
                 <DataEntryBar/>
