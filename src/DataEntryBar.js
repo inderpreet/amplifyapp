@@ -1,11 +1,32 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import FileSelectComponent from "./FileSelectComponent";
 
-const DataEntryBar = (setImg, i) => {
-    const [images, setImages] = useState([]);
+const DataEntryBar = ({setData, texts, bulletPoints, images}) => {
+    const [_images, setImages] = useState([]);
 
-    // useEffect( ()=>{
-    // }, [images]);
+    useEffect(() => {
+        setData({images: _images});
+    }, [_images]);
+
+    const updateText = (e) => {
+        if (texts) {
+            let temp = texts.slice();
+            if (e.target.id === 'text1') {
+                temp[0] = e.target.value;
+            } else if (e.target.id === 'text2') {
+                temp[1] = e.target.value;
+            }
+            setData({texts: temp});
+        }
+
+        if (bulletPoints) {
+            if (e.target.id === 'bullet-list') {
+                let temp = bulletPoints.slice();
+                temp[0]= e.target.value;
+                setData({bulletPoints: temp});
+            }
+        }
+    }
 
     return (
         <div className="custom-group shadow">
@@ -54,7 +75,11 @@ const DataEntryBar = (setImg, i) => {
                         <span className="input-group-text">
                             Text1
                         </span>
-                        <input className="form-control" type="text" aria-label="Text1"/>
+                        <input className="form-control"
+                               type="text"
+                               aria-label="Text1"
+                               onChange={updateText}
+                               id="text1"/>
                     </div>
                 </div>
 
@@ -63,7 +88,12 @@ const DataEntryBar = (setImg, i) => {
                         <span className="input-group-text">
                             Text2
                         </span>
-                        <input className="form-control" type="text" aria-label="Text2"/>
+                        <input className="form-control"
+                               type="text"
+                               aria-label="Text2"
+                               onChange={updateText}
+                               id="text2"
+                        />
                     </div>
                 </div>
 
@@ -77,10 +107,9 @@ const DataEntryBar = (setImg, i) => {
                         <span className="input-group-text">
                             Bullet List
                         </span>
-                        <textarea className="form-control" rows="5"/>
+                        <textarea className="form-control" rows="5" id="bullet-list" onChange={updateText}/>
                     </div>
                 </div>
-
             </div>
             {/*End Row*/}
             <hr/>

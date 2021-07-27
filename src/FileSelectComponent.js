@@ -18,7 +18,6 @@ const FileSelectComponent = ({setImageUrl, imageUrl, index}) => {
         temp[index] = html;
         setImageUrl(temp);
         }
-
     }
 
     useEffect(() => {
