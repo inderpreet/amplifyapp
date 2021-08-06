@@ -4,7 +4,8 @@ import brand from "./assets/img/bot-row.png";
 import Text from "./Text"
 
 
-const ImageUpload = (props) =>{
+
+const ImageUpload1 = (props) =>{
     return (
         <div className="App image-frame container">
             <div className="row top-row align-items-center">
@@ -21,42 +22,21 @@ const ImageUpload = (props) =>{
                 <div className="col-8">
                     <div className="row g-1 mt-0">
                         <div className="col">
-                            <div className="img1">
-                                {props.imagePreview}
+                            <div className="img1soldout">"
+                                {props.whitebox1}
                             </div>
                         </div>
-                        <div className="col">
-                            <div className="img2">
-                                {props.imagePreview1}
-                            </div>
-                        </div>
+                       
                     </div>
                     <div className="row">
                         <div className="col">
-                            <div className="img3">
+                            <div className="img3soldout">
                                 {props.imagePreview2}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="col align-items-center g-0">
-                    <div className="row desc g-0">
-                        <ul>
-                            <li>{props.whitebox1}</li>
-                            <li>{props.whitebox2}</li>
-                            <li>{props.whitebox3}</li>
-                            <li>{props.whitebox4}</li>
-                            <li>{props.whitebox5}</li>
-                        </ul>
-                    </div>
-                    <div className="row g-1">
-                        <div className="col">
-                            <div className="img4">
-                                {props.imagePreview3}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <div className="row row-bottom">
@@ -69,4 +49,4 @@ const ImageUpload = (props) =>{
 
 
 
-export default ImageUpload;
+export default ImageUpload1;
