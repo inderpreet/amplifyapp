@@ -3,8 +3,8 @@
 
 $primary: #6f42c1;
 $font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 $bs-gutter-x: 0;
 $bs-gutter-y: 0;
@@ -35,9 +35,10 @@ $bs-gutter-y: 0;
   background-position: center;
   // color: rgb(218, 204, 8);
   color:red;
- 
- 
-  
+  font-size: 4px;
+
+
+
 }
 .top-row1 {
   height: 120px;
@@ -48,32 +49,39 @@ $bs-gutter-y: 0;
   color:red;
   border:1px solid white;
   border-radius: 6px;
- 
+
   .home-col1{
     font-size:40px;
     align-items: center;
     padding-left:80px;
-    }
+  }
 
-  }
-  .home-col2{
-    color:white;
-    font-size: 35px;
-   
-    
-  }
+}
+.home-col2{
+  color:white;
+  font-size: 35px;
+
+
+}
 .top-row2 {
   height: 120px;
   margin-top: 5px!important;
   background-size: cover;
   background-position: center;
   padding-top: 100px;
-  padding-left: 110px;
-  
+  padding-left: 100px;
+
 }
 .home-buttons{
-  margin-left: -30px;
+  margin-left:-80px;
 }
+.home-buttons1{
+  margin-left:-50px;
+}
+.home-buttons2{
+  margin-left:-30px;
+}
+
 
 
 .top-row-left {
@@ -88,7 +96,10 @@ $bs-gutter-y: 0;
   height: 500px;
   background-color: rgb(218, 204, 8);
   z-index: -1;
+  line-height: 28px;
   position: relative;
+
+
 }
 
 %inner-box-shared {
@@ -127,14 +138,15 @@ $bs-gutter-y: 0;
 .img1soldout{
   @extend %inner-box-shared;
   //background-image: url("./assets/img/img1.jpg");
-  height: 100px;
+  height: 150px;
   width:775px;
   color:#800080;
-  font-size: 30px;
+  font-size: 25px;
   border:2px solid yellow;
   background-image: linear-gradient(180deg, lightblue, red);
   font-family: 'Times New Roman', Times, serif;
-  font-style: italic
+  font-style: italic;
+  padding:6px
 }
 .occasion{
   @extend %inner-box-shared;
@@ -147,14 +159,14 @@ $bs-gutter-y: 0;
   background-image: linear-gradient(180deg, lightblue, red);
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
-  
+
 }
 
 
 
 .img2 {
   @extend %inner-box-shared;
- // background-image: url("./assets/img/img2.jpg");
+  // background-image: url("./assets/img/img2.jpg");
   height: 180px;
 }
 .img2 img{
@@ -164,7 +176,7 @@ $bs-gutter-y: 0;
 
 .img3 {
   @extend %inner-box-shared;
- // background-image: url("./assets/img/img3.jpg");
+  // background-image: url("./assets/img/img3.jpg");
   height: 290px;
 }
 .img3 img{
@@ -173,7 +185,7 @@ $bs-gutter-y: 0;
 }
 .img3soldout {
   @extend %inner-box-shared;
- // background-image: url("./assets/img/img3.jpg");
+  // background-image: url("./assets/img/img3.jpg");
   height: 365px;
   width:775px;
 }
@@ -181,10 +193,31 @@ $bs-gutter-y: 0;
   width: 100%;
   height: 100%;
 }
+.img5soldout {
+  @extend %inner-box-shared;
+  // background-image: url("./assets/img/img3.jpg");
+  height: 320px;
+  width:380px;
+}
+.img5soldout img{
+  width: 100%;
+  height: 100%;
+}
+.img6soldout {
+  @extend %inner-box-shared;
+  // background-image: url("./assets/img/img3.jpg");
+  height: 320px;
+  width:390px;
+  margin-left: 120px;
+}
+.img6soldout img{
+  width: 100%;
+  height: 100%;
+}
 
 .img4 {
   @extend %inner-box-shared;
- // background-image: url("./assets/img/img4.jpg");
+  // background-image: url("./assets/img/img4.jpg");
   height: 240px;
   margin-right: 10px !important;
 }
@@ -209,16 +242,16 @@ $bs-gutter-y: 0;
   height: 180px !important;
   width: 800px;
   border-radius: 0 0 10px 10px;
- 
- 
-  }
-  .bottom1 {
-    height: 180px !important;
-    width: 825px;
-    border-radius: 0 0 10px 10px;
-    
-    margin-top: 195px!important;
-       }
+
+
+}
+.bottom1 {
+  height: 180px !important;
+  width: 825px;
+  border-radius: 0 0 10px 10px;
+
+  margin-top: 195px!important;
+}
 
 .brand {
   // background-color: yellow;
@@ -304,6 +337,9 @@ $bs-gutter-y: 0;
 .backtohome1{
   margin-top: 20px;
   margin-left: 260px;
+}
+.home-left{
+  margin-left: 10px
 }
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";

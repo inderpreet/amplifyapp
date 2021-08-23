@@ -1,17 +1,18 @@
 import { React , Component} from "react";
-import ImageUpload1 from "./ImageUpload1";
+import ImageUpload3 from "./ImageUpload3";
 import {Link } from 'react-router-dom'
 
 
 
-export default class Listing extends Component {
+export default class SoldOut1 extends Component {
     constructor(props) {
         super(props);
         this.state = {file: '', imagePreviewUrl: ''};
+        this.state = {file: '', imagePreviewUrl1: ''};
         this.state = {greybox: ''};
         this.state = {redbox: ''};
         this.state = {whitebox1: ''};
-        
+
     }
 
     handleChange(e) {
@@ -27,13 +28,18 @@ export default class Listing extends Component {
     myChangeHandler2 = (event) => {
         this.setState({whitebox1: event.target.value});
     }
-   
+
     _handleSubmit2(e) {
         e.preventDefault();
         // TODO: do something with -> this.state.file
         console.log('handle uploading-', this.state.file);
     }
- 
+    _handleSubmit3(e) {
+        e.preventDefault();
+        // TODO: do something with -> this.state.file
+        console.log('handle uploading-', this.state.file);
+    }
+
     _handleImageChange2(e) {
         e.preventDefault();
 
@@ -44,6 +50,21 @@ export default class Listing extends Component {
             this.setState({
                 file: file,
                 imagePreviewUrl2: reader.result
+            });
+        }
+
+        reader.readAsDataURL(file)
+    }
+    _handleImageChange3(e) {
+        e.preventDefault();
+
+        let reader = new FileReader();
+        let file = e.target.files[0];
+
+        reader.onloadend = () => {
+            this.setState({
+                file: file,
+                imagePreviewUrl1: reader.result
             });
         }
 
@@ -62,16 +83,24 @@ export default class Listing extends Component {
         } else {
             imagePreview2 = (<div className="previewText">Please select an Image for Preview</div>);
         }
+        let {imagePreviewUrl1} = this.state;
+        let imagePreview1 = null;
+        if (imagePreviewUrl1) {
+            imagePreview1 = (<img src={imagePreviewUrl1}/>);
+        } else {
+            imagePreview1 = (<div className="previewText">Please select an Image for Preview</div>);
+        }
         return (
             <div className="float-container">
                 <div className="float-child">
-                    <ImageUpload1 imagePreview2={imagePreview2}
-                                 greybox={this.state.greybox} redbox={this.state.redbox}
-                                 whitebox1={this.state.whitebox1}
-                                />
+                    <ImageUpload3 imagePreview2={imagePreview2}
+                                  imagePreview1={imagePreview1}
+                                  greybox={this.state.greybox} redbox={this.state.redbox}
+                                  whitebox1={this.state.whitebox1}
+                    />
                 </div>
                 <div className="float-child">
-                <div className="Text">
+                    <div className="Text">
                         Enter Text and Message
                     </div>
                     <div className="Image-Uplaod-Box">
@@ -88,25 +117,31 @@ export default class Listing extends Component {
                             <p className="Text1">Enter your Message Here:</p>
                             <textarea id="markdown-content" onChange={this.myChangeHandler2}
                                       defaultValue={this.state.value}/>
-                            </form>
-                       
+                        </form>
+
                     </div>
                     <div className="Text">
-                        Select an Image of New House 
+                        Select an Image of New House
                     </div>
-                    <div className="Image-Uplaod-Box">                       
+                    <div className="Image-Uplaod-Box">
                         <form className="File-Input" onSubmit={(e) => this._handleSubmit2(e)}>
                             <div className="Text1"> New House</div>
                             <input className="fileInput"
                                    type="file"
                                    onChange={(e) => this._handleImageChange2(e)}/>
                         </form>
+                        <form className="File-Input" onSubmit={(e) => this._handleSubmit3(e)}>
+                            <div className="Text1"> New House</div>
+                            <input className="fileInput"
+                                   type="file"
+                                   onChange={(e) => this._handleImageChange3(e)}/>
+                        </form>
                     </div>
                     <Link to="/">
-                  <button type="button" class="btn btn-danger btn-lg backtohome"> Back to Home!</button>
-                  </Link>
+                        <button type="button" class="btn btn-danger btn-lg backtohome"> Back to Home!</button>
+                    </Link>
                 </div>
-                </div>
+            </div>
 
         )
     }
