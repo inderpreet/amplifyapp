@@ -35,7 +35,9 @@ $bs-gutter-y: 0;
   background-size: cover;
   background-position: center;
   // color: rgb(218, 204, 8);
-  color: red;
+  color:red;
+  font-size: 4px;
+
 
 
 }
@@ -46,38 +48,42 @@ $bs-gutter-y: 0;
   background-size: cover;
   background-position: center;
   // color: rgb(218, 204, 8);
-  color: red;
-  border: 1px solid white;
+  color:red;
+  border:1px solid white;
   border-radius: 6px;
 
-  .home-col1 {
-    font-size: 40px;
+  .home-col1{
+    font-size:40px;
     align-items: center;
-    padding-left: 80px;
+    padding-left:80px;
   }
 
 }
-
-.home-col2 {
-  color: white;
+.home-col2{
+  color:white;
   font-size: 35px;
 
 
 }
-
 .top-row2 {
   height: 120px;
-  margin-top: 5px !important;
+  margin-top: 5px!important;
   background-size: cover;
   background-position: center;
   padding-top: 100px;
-  padding-left: 110px;
+  padding-left: 100px;
 
 }
-
-.home-buttons {
-  margin-left: -30px;
+.home-buttons{
+  margin-left:-80px;
 }
+.home-buttons1{
+  margin-left:-50px;
+}
+.home-buttons2{
+  margin-left:-30px;
+}
+
 
 
 .top-row-left {
@@ -92,7 +98,10 @@ $bs-gutter-y: 0;
   height: 500px;
   background-color: rgb(218, 204, 8);
   z-index: -1;
+  line-height: 28px;
   position: relative;
+
+
 }
 
 %inner-box-shared {
@@ -105,7 +114,7 @@ $bs-gutter-y: 0;
 
 .float-container {
   border: 3px solid yellow;
-  height: 1500px;
+  height:1500px;
 
 }
 
@@ -114,7 +123,7 @@ $bs-gutter-y: 0;
   float: left;
   padding: 20px;
   border: 2px solid yellow;
-  height: 1000px;
+  height:1000px;
 
 }
 
@@ -125,19 +134,18 @@ $bs-gutter-y: 0;
 }
 
 
-.img1 img {
+.img1 img{
   width: 100%;
   height: 100%;
 }
-
-.img1soldout {
+.img1soldout{
   @extend %inner-box-shared;
   //background-image: url("./assets/img/img1.jpg");
-  height: 100px;
-  width: 775px;
-  color: #800080;
-  font-size: 30px;
-  border: 2px solid yellow;
+  height: 150px;
+  width:775px;
+  color:#800080;
+  font-size: 25px;
+  border:2px solid yellow;
   background-image: linear-gradient(180deg, lightblue, red);
   font-family: 'Times New Roman', Times, serif;
   font-style: italic
@@ -147,14 +155,14 @@ $bs-gutter-y: 0;
   @extend %inner-box-shared;
   //background-image: url("./assets/img/img1.jpg");
   height: 100px;
-  width: 775px;
-  color: #800080;
+  width:775px;
+  color:#800080;
   font-size: 30px;
-  border: 2px solid yellow;
+  border:2px solid yellow;
   background-image: linear-gradient(180deg, lightblue, red);
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
-
+  
 }
 
 .img-container {
@@ -163,46 +171,62 @@ $bs-gutter-y: 0;
 
 .img2 {
   @extend %inner-box-shared;
-  // background-image: url("./assets/img/img2.jpg");
+ // background-image: url("./assets/img/img2.jpg");
   height: 180px;
 }
-
-.img2 img {
+.img2 img{
   width: 100%;
   height: 100%;
 }
 
 .img3 {
   @extend %inner-box-shared;
-  // background-image: url("./assets/img/img3.jpg");
+ // background-image: url("./assets/img/img3.jpg");
   height: 290px;
 }
-
-.img3 img {
+.img3 img{
   width: 100%;
   height: 100%;
 }
-
 .img3soldout {
   @extend %inner-box-shared;
-  // background-image: url("./assets/img/img3.jpg");
+ // background-image: url("./assets/img/img3.jpg");
   height: 365px;
-  width: 775px;
+  width:775px;
 }
-
-.img3soldout img {
+.img3soldout img{
+  width: 100%;
+  height: 100%;
+}
+.img5soldout {
+  @extend %inner-box-shared;
+  // background-image: url("./assets/img/img3.jpg");
+  height: 320px;
+  width:380px;
+}
+.img5soldout img{
+  width: 100%;
+  height: 100%;
+}
+.img6soldout {
+  @extend %inner-box-shared;
+  // background-image: url("./assets/img/img3.jpg");
+  height: 320px;
+  width:390px;
+  margin-left: 120px;
+}
+.img6soldout img{
   width: 100%;
   height: 100%;
 }
 
 .img4 {
   @extend %inner-box-shared;
-  // background-image: url("./assets/img/img4.jpg");
+ // background-image: url("./assets/img/img4.jpg");
   height: 240px;
   margin-right: 10px !important;
 }
-
-.img4 img {
+.img4 img{
   width: 100%;
   height: 100%;
 }
@@ -223,14 +247,15 @@ $bs-gutter-y: 0;
   height: 180px !important;
   width: 800px;
   border-radius: 0 0 10px 10px;
-}
 
+
+}
 .bottom1 {
   height: 180px !important;
   width: 825px;
   border-radius: 0 0 10px 10px;
 
-  margin-top: 195px !important;
+  margin-top: 195px!important;
 }
 
 .brand {
@@ -240,7 +265,6 @@ $bs-gutter-y: 0;
   top: 638px;
   left: 63px;
 }
-
 .brand1 {
   // background-color: yellow;
   position: absolute;
@@ -248,12 +272,11 @@ $bs-gutter-y: 0;
   top: 575px;
   margin-left: -11px !important;
 }
-
 .brand2 {
   // background-color: yellow;
   position: absolute;
   width: 820px !important;
-  top: 517px !important;
+  top: 517px!important;
   margin-left: -12px !important;
 }
 
@@ -261,15 +284,14 @@ $bs-gutter-y: 0;
 .item-box {
   border: 1px solid $primary;
 }
-
-.Text {
+.Text{
   margin-top: 2rem !important;
   margin-left: 280px;
   font-weight: bold;
   font-size: 20px;
 }
 
-.Image-Uplaod-Box {
+.Image-Uplaod-Box{
   height: 350px;
   width: 850px !important;
   border: 3px solid grey;
@@ -278,57 +300,51 @@ $bs-gutter-y: 0;
   margin-top: 1rem !important;
   border-radius: 10px;
 }
-
-.File-Input {
+.File-Input{
   margin-left: 20px;
   margin-top: 1rem;
 }
-
-.Text1 {
+.Text1{
   margin-left: 10px;
   font-weight: bold;
 }
-
-.Text2 {
+.Text2{
   margin-left: 30px;
   font-weight: bold;
 }
-
-.File-Input1 {
+.File-Input1{
   margin-left: 40px;
   margin-top: 3rem;
 }
 
 
-.Text2 {
+.Text2{
   margin-left: 10px;
   font-weight: bold;
   margin-top: -10px;
 }
-
-.File-Input1 {
+.File-Input1{
   margin-left: 20px;
 
 }
-
-.backtohome {
+.backtohome{
   margin-top: 20px;
   margin-left: 400px;
 }
-
-.occasion-right {
-  height: 500px;
-  width: 600px;
+.occasion-right{
+  height:500px;
+  width:600px;
   margin-left: 50px;
   margin-top: 75px;
-  border: 2px solid grey;
+  border:2px solid grey;
   border-radius: 5px;
 }
-
-.backtohome1 {
+.backtohome1{
   margin-top: 20px;
   margin-left: 260px;
 }
-
+.home-left{
+  margin-left: 10px
+}
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
