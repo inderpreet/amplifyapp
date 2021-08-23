@@ -52,7 +52,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl2} = this.state;
         let imagePreview2 = null;
         if (imagePreviewUrl2) {
-            imagePreview2 = (<img src={imagePreviewUrl2}/>);
+            imagePreview2 = (<img className="img-container" src={imagePreviewUrl2}/>);
         } else {
             imagePreview2 = (<div className="previewText">Please select an Image for Preview</div>);
         }

@@ -1,19 +1,18 @@
-
 import React from "react";
 import brand from "./assets/img/bot-row.png";
 import Text from "./Text"
 
 
-const ImageUpload = (props) =>{
+const ImageUpload = (props) => {
     return (
         <div className="App image-frame container">
             <div className="row top-row align-items-center">
                 <div className="col-9 h2">
-                    <br/>    {props.greybox}   
-             {/* Detached Backsplit 5 Bunglow <br/>For Sale In Brampton */}
-                 
+                    <br/> {props.greybox}
+                    {/* Detached Backsplit 5 Bunglow <br/>For Sale In Brampton */}
+
                 </div>
-                <div className="col h3 top-row-right" style={{ color: "white" }}>
+                <div className="col h3 top-row-right" style={{color: "white"}}>
                     {props.redbox}
                 </div>
             </div>
@@ -60,13 +59,12 @@ const ImageUpload = (props) =>{
             </div>
 
             <div className="row row-bottom">
-                <img src={brand} alt="brand image" className="brand" />
+                <img src={brand} alt="brand image" className="brand"/>
             </div>
 
         </div>
     );
 }
-
 
 
 export default ImageUpload;

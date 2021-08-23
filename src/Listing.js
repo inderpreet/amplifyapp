@@ -137,7 +137,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl} = this.state;
         let imagePreview = null;
         if (imagePreviewUrl) {
-            imagePreview = (<img src={imagePreviewUrl}/>);
+            imagePreview = (<img className="img-container"  src={imagePreviewUrl}/>);
         } else {
             imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
         }
@@ -152,7 +152,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl1} = this.state;
         let imagePreview1 = null;
         if (imagePreviewUrl1) {
-            imagePreview1 = (<img src={imagePreviewUrl1}/>);
+            imagePreview1 = (<img className="img-container" src={imagePreviewUrl1}/>);
         } else {
             imagePreview1 = (<div className="previewText">Please select an Image for Preview</div>);
         }
@@ -160,7 +160,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl2} = this.state;
         let imagePreview2 = null;
         if (imagePreviewUrl2) {
-            imagePreview2 = (<img src={imagePreviewUrl2}/>);
+            imagePreview2 = (<img className="img-container" src={imagePreviewUrl2}/>);
         } else {
             imagePreview2 = (<div className="previewText">Please select an Image for Preview</div>);
         }
@@ -168,7 +168,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl3} = this.state;
         let imagePreview3 = null;
         if (imagePreviewUrl3) {
-            imagePreview3 = (<img src={imagePreviewUrl3}/>);
+            imagePreview3 = (<img className="img-container" src={imagePreviewUrl3}/>);
         } else {
             imagePreview3 = (<div className="previewText">Please select an Image for Preview</div>);
         }

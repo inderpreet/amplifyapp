@@ -58,7 +58,7 @@ export default class Listing extends Component {
         let {imagePreviewUrl2} = this.state;
         let imagePreview2 = null;
         if (imagePreviewUrl2) {
-            imagePreview2 = (<img src={imagePreviewUrl2}/>);
+            imagePreview2 = (<img className="img-container" src={imagePreviewUrl2}/>);
         } else {
             imagePreview2 = (<div className="previewText">Please select an Image for Preview</div>);
         }
@@ -94,7 +94,7 @@ export default class Listing extends Component {
                     <div className="Text">
                         Select an Image of New House 
                     </div>
-                    <div className="Image-Uplaod-Box">                       
+                    <div className="Image-Uplaod-Box">
                         <form className="File-Input" onSubmit={(e) => this._handleSubmit2(e)}>
                             <div className="Text1"> New House</div>
                             <input className="fileInput"
